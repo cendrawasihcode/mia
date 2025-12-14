@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denah Tempat Duduk Kelas (Biru)</title>
+    
+    <style>
+        /* Styling Umum */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #e6f7ff; /* Biru muda sangat terang */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .classroom-container {
+            width: 90%;
+            max-width: 1000px;
+            background-color: #ffffff;
+            border: 5px solid #007bff; /* Biru primer untuk bingkai kelas */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0056b3; /* Biru gelap untuk judul */
+            margin-bottom: 30px;
+        }
+
+        /* Area Guru/Papan Tulis */
+        .front-area {
+            background-color: #17a2b8; /* Biru keabu-abuan (Cyan) */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+
+        /* Konfigurasi Grid untuk Denah Meja */
+        .seating-chart {
+            display: grid;
+            /* 4 kolom meja */
+            grid-template-columns: repeat(4, 1fr); 
+            /* Jarak antar meja */
+            gap: 20px; 
+            padding: 10px;
+        }
+
+        .desk {
+            background-color: #4da6ff; /* Warna meja (Biru sedang) */
+            border: 2px solid #007bff;
+            height: 100px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px;
+            text-align: center;
+            transition: transform 0.2s;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .desk:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .student {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #0056b3; /* Teks nama siswa biru gelap */
+            background-color: #ffffff; /* Latar belakang nama siswa putih */
+            padding: 2px 5px;
+            border-radius: 3px;
+            width: 80%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            border: 1px solid #cce5ff;
+        }
+        
+        .row-label {
+            grid-column: 1 / -1; /* Rentang di seluruh kolom */
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #007bff; /* Biru cerah untuk label baris */
+            margin: 15px 0 5px 0;
+            padding-top: 10px;
+            border-top: 1px dashed #b8daff;
+        }
+        
+        .back-area {
+            margin-top: 30px; 
+            background-color: #007bff; /* Biru primer */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="classroom-container">
+    <h1>Denah Tempat Duduk Kelas (4 x 5 Meja)</h1>
+
+    <div class="front-area">
+        PAPAN TULIS / MEJA GURU (DEPAN KELAS)
+    </div>
+
+    <div class="seating-chart">
+        
+        <div class="row-label">BARIS 1</div>
+        <div class="desk" id="desk-1">
+            <div class="student">Siswa 1 (Kiri)</div>
+            <div class="student">Siswa 2 (Kanan)</div>
+        </div>
+        <div class="desk" id="desk-2">
+            <div class="student">Siswa 3</div>
+            <div class="student">Siswa 4</div>
+        </div>
+        <div class="desk" id="desk-3">
+            <div class="student">Siswa 5</div>
+            <div class="student">Siswa 6</div>
+        </div>
+        <div class="desk" id="desk-4">
+            <div class="student">Siswa 7</div>
+            <div class="student">Siswa 8</div>
+        </div>
+
+        <div class="row-label">BARIS 2</div>
+        <div class="desk" id="desk-5">
+            <div class="student">Siswa 9</div>
+            <div class="student">Siswa 10</div>
+        </div>
+        <div class="desk" id="desk-6">
+            <div class="student">Siswa 11</div>
+            <div class="student">Siswa 12</div>
+        </div>
+        <div class="desk" id="desk-7">
+            <div class="student">Siswa 13</div>
+            <div class="student">Siswa 14</div>
+        </div>
+        <div class="desk" id="desk-8">
+            <div class="student">Siswa 15</div>
+            <div class="student">Siswa 16</div>
+        </div>
+
+        <div class="row-label">BARIS 3</div>
+        <div class="desk" id="desk-9">
+            <div class="student">Siswa 17</div>
+            <div class="student">Siswa 18</div>
+        </div>
+        <div class="desk" id="desk-10">
+            <div class="student">Siswa 19</div>
+            <div class="student">Siswa 20</div>
+        </div>
+        <div class="desk" id="desk-11">
+            <div class="student">Siswa 21</div>
+            <div class="student">Siswa 22</div>
+        </div>
+        <div class="desk" id="desk-12">
+            <div class="student">Siswa 23</div>
+            <div class="student">Siswa 24</div>
+        </div>
+
+        <div class="row-label">BARIS 4</div>
+        <div class="desk" id="desk-13">
+            <div class="student">Siswa 25</div>
+            <div class="student">Siswa 26</div>
+        </div>
+        <div class="desk" id="desk-14">
+            <div class="student">Siswa 27</div>
+            <div class="student">Siswa 28</div>
+        </div>
+        <div class="desk" id="desk-15">
+            <div class="student">Siswa 29</div>
+            <div class="student">Siswa 30</div>
+        </div>
+        <div class="desk" id="desk-16">
+            <div class="student">Siswa 31</div>
+            <div class="student">Siswa 32</div>
+        </div>
+
+        <div class="row-label">BARIS 5 (BELAKANG)</div>
+        <div class="desk" id="desk-17">
+            <div class="student">Siswa 33</div>
+            <div class="student">Siswa 34</div>
+        </div>
+        <div class="desk" id="desk-18">
+            <div class="student">Siswa 35</div>
+            <div class="student">Siswa 36</div>
+        </div>
+        <div class="desk" id="desk-19">
+            <div class="student">Siswa 37</div>
+            <div class="student">Siswa 38</div>
+        </div>
+        <div class="desk" id="desk-20">
+            <div class="student">Siswa 39</div>
+            <div class="student">Siswa 40</div>
+        </div>
+        
+    </div>
+    <div class="back-area">
+        PINTU KELUAR / AREA BELAKANG
+    </div>
+</div>
+
+</body>
+</html>

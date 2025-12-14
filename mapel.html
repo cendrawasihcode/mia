@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pelajaran XII MIA (6 Hari)</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #2c3e50;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 1400px; /* Lebar ditambah untuk 6 hari */
+            margin: 0 auto;
+        }
+        h1 {
+            color: #8e44ad;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            border-bottom: 3px solid #8e44ad;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .note {
+            text-align: center;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* Waktu + 6 Hari Sekolah */
+            gap: 12px;
+            text-align: center;
+            overflow-x: auto; /* Memastikan responsif jika layar kecil */
+        }
+        .header-cell {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            padding: 12px 8px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-size: 1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .time-cell {
+            background-color: #ecf0f1;
+            font-weight: bold;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 0.85em;
+        }
+        .lesson-cell {
+            padding: 12px 8px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: default;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            font-size: 0.9em;
+        }
+        .lesson-cell:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Warna Mata Pelajaran (Tetap) */
+        .math { background-color: #f1c40f; color: #7d630c; }
+        .physic { background-color: #e74c3c; color: white; }
+        .chem { background-color: #2ecc71; color: white; }
+        .bio { background-color: #3498db; color: white; }
+        .eng { background-color: #9b59b6; color: white; }
+        .indo { background-color: #1abc9c; color: white; }
+        .religion { background-color: #f39c12; color: #7a4d06; }
+        .social { background-color: #bdc3c7; color: #5c6267; }
+        .break { background-color: #34495e; color: white; font-weight: bold; }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #8e44ad;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #9b59b6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Jadwal Pelajaran Kelas XII MIA </h1>
+        <p class="note">*Jam Pelajaran ke-4 (09.15 - 09.40) dipersingkat menjadi 25 menit agar Istirahat Besar dimulai pukul 09.40</p>
+
+        <div class="schedule-grid">
+            <div class="header-cell">Waktu</div>
+            <div class="header-cell">Senin</div>
+            <div class="header-cell">Selasa</div>
+            <div class="header-cell">Rabu</div>
+            <div class="header-cell">Kamis</div>
+            <div class="header-cell">Jumat</div>
+            <div class="header-cell">Sabtu</div>
+
+            <div class="time-cell">07.00 - 07.40</div>
+            <div class="lesson-cell bio">Fisika</div>
+            <div class="lesson-cell math">Matematika P</div>
+            <div class="lesson-cell chem">Fiqh</div>
+            <div class="lesson-cell eng">Pkn</div>
+            <div class="lesson-cell physic">Matematika</div>
+            <div class="lesson-cell social">Bahasa Indonesia</div>
+
+            <div class="time-cell">07.40 - 08.20</div>
+            <div class="lesson-cell bio">Fisika</div>
+            <div class="lesson-cell math">Matematika P</div>
+            <div class="lesson-cell chem">Fiqh</div>
+            <div class="lesson-cell eng">Pkn</div>
+            <div class="lesson-cell physic">Matematika</div>
+            <div class="lesson-cell social">Bahasa Indonesia</div>
+
+            <div class="time-cell">08.20 - 09.00</div>
+            <div class="lesson-cell physic">Bahasa Indonesia</div>
+            <div class="lesson-cell indo">PJOK</div>
+            <div class="lesson-cell religion">Matematika P</div>
+            <div class="lesson-cell social">Kimia</div>
+            <div class="lesson-cell math">Aqidah</div>
+            <div class="lesson-cell social">Informatika</div>
+
+            <div class="time-cell" style="background-color: #f9e4b7;">09.00 - 09.40</div>
+            <div class="lesson-cell chem">Bahasa Indonesia</div>
+            <div class="lesson-cell religion">PJOK</div>
+            <div class="lesson-cell math">Matematika P</div>
+            <div class="lesson-cell bio">Kimia</div>
+            <div class="lesson-cell indo">Al-Qur'an Hadits</div>
+            <div class="lesson-cell social">Informatika</div>
+
+            <div class="time-cell">09.40 - 10.10</div>
+            <div class="break" style="grid-column: 2 / span 6;">ISTIRAHAT</div>
+
+            <div class="time-cell">10.10 - 10.50</div>
+            <div class="lesson-cell chem">Matematika</div>
+            <div class="lesson-cell religion">Bahasa Arab</div>
+            <div class="lesson-cell math">Biologi</div>
+            <div class="lesson-cell bio">Biologi</div>
+            <div class="lesson-cell indo">Al-Qur'an Hadits</div>
+            <div class="lesson-cell social">Ski</div>
+
+            <div class="time-cell">10.50 - 11.30</div>
+            <div class="lesson-cell indo">Matematika</div>
+            <div class="lesson-cell physic">Bahasa Arab</div>
+            <div class="lesson-cell eng">Biologi</div>
+            <div class="lesson-cell chem">Biologi</div>
+            <div class="lesson-cell social">Seni Budaya</div>
+            <div class="lesson-cell social">Fisika</div>
+
+            <div class="time-cell">11.30 - 12.00</div>
+            <div class="lesson-cell social">Sejarah</div>
+            <div class="lesson-cell social">Bahasa Inggris</div>
+            <div class="lesson-cell social">Bahasa Jerman</div>
+            <div class="lesson-cell social">Kimia</div>
+            <div class="lesson-cell social" style="background-color: #e5e5e5; color: #777;">PULANG</div>
+            <div class="lesson-cell social">Fisika</div>
+
+
+            <div class="time-cell">12.00 - 12.30</div>
+            <div class="lesson-cell social">Sejarah</div>
+            <div class="lesson-cell social">Bahasa Inggris</div>
+            <div class="lesson-cell social">Bahasa Inggris</div>
+            <div class="lesson-cell social">Kimia</div>
+            <div class="lesson-cell social" style="background-color: #e5e5e5; color: #777;">PULANG</div>
+            <div class="lesson-cell social" style="background-color: #e5e5e5; color: #777;">PULANG</div>
+            
+        </div>
+        
+        <a href="12 Mia.html" class="back-button">
+            &laquo; Kembali ke Halaman Utama
+        </a>
+    </div>
+
+</body>
+</html>
